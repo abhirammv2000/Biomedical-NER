@@ -1,0 +1,82 @@
+{
+  "dev": {
+    "exact": {
+      "Chemical": {
+        "accuracy": 0.6463,
+        "precision_when_predicted": 0.9974,
+        "coverage": 0.648,
+        "n": 5304
+      },
+      "Disease": {
+        "accuracy": 0.6079,
+        "precision_when_predicted": 0.9731,
+        "coverage": 0.6246,
+        "n": 4228
+      },
+      "micro": {
+        "accuracy": 0.6292,
+        "coverage": 0.6376,
+        "n": 9532
+      }
+    },
+    "fuzzy_0.9": {
+      "Chemical": {
+        "accuracy": 0.6574,
+        "precision_when_predicted": 0.9923,
+        "coverage": 0.6625,
+        "n": 5304
+      },
+      "Disease": {
+        "accuracy": 0.6372,
+        "precision_when_predicted": 0.9656,
+        "coverage": 0.6599,
+        "n": 4228
+      },
+      "micro": {
+        "accuracy": 0.6484,
+        "coverage": 0.6614,
+        "n": 9532
+      }
+    }
+  },
+  "test": {
+    "exact": {
+      "Chemical": {
+        "accuracy": 0.6058,
+        "precision_when_predicted": 0.9872,
+        "coverage": 0.6136,
+        "n": 5355
+      },
+      "Disease": {
+        "accuracy": 0.6289,
+        "precision_when_predicted": 0.9786,
+        "coverage": 0.6427,
+        "n": 4363
+      },
+      "micro": {
+        "accuracy": 0.6162,
+        "coverage": 0.6267,
+        "n": 9718
+      }
+    },
+    "fuzzy_0.9": {
+      "Chemical": {
+        "accuracy": 0.6209,
+        "precision_when_predicted": 0.9846,
+        "coverage": 0.6306,
+        "n": 5355
+      },
+      "Disease": {
+        "accuracy": 0.6571,
+        "precision_when_predicted": 0.9699,
+        "coverage": 0.6775,
+        "n": 4363
+      },
+      "micro": {
+        "accuracy": 0.6372,
+        "coverage": 0.6517,
+        "n": 9718
+      }
+    }
+  }
+}

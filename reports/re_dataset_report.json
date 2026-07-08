@@ -1,0 +1,29 @@
+{
+  "train": {
+    "candidate_pairs": 5432,
+    "positives": 1038,
+    "negatives": 4394,
+    "positive_rate": 0.1911,
+    "gold_relations": 1038,
+    "recoverable": 1038,
+    "recall_ceiling": 1.0
+  },
+  "dev": {
+    "candidate_pairs": 5261,
+    "positives": 1012,
+    "negatives": 4249,
+    "positive_rate": 0.1924,
+    "gold_relations": 1012,
+    "recoverable": 1012,
+    "recall_ceiling": 1.0
+  },
+  "test": {
+    "candidate_pairs": 5405,
+    "positives": 1066,
+    "negatives": 4339,
+    "positive_rate": 0.1972,
+    "gold_relations": 1066,
+    "recoverable": 1066,
+    "recall_ceiling": 1.0
+  }
+}

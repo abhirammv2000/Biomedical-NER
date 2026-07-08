@@ -1,0 +1,798 @@
+{
+  "summary": {
+    "nodes": 1262,
+    "chemicals": 660,
+    "diseases": 602,
+    "edges": 2434
+  },
+  "centrality": {
+    "top_inducer_chemicals": [
+      {
+        "mesh": "D003042",
+        "label": "cocaine",
+        "degree": 39
+      },
+      {
+        "mesh": "D004317",
+        "label": "doxorubicin",
+        "degree": 39
+      },
+      {
+        "mesh": "D000638",
+        "label": "amiodarone",
+        "degree": 32
+      },
+      {
+        "mesh": "D016559",
+        "label": "tacrolimus",
+        "degree": 28
+      },
+      {
+        "mesh": "D005472",
+        "label": "5-FU",
+        "degree": 26
+      },
+      {
+        "mesh": "D009020",
+        "label": "morphine",
+        "degree": 23
+      },
+      {
+        "mesh": "D002945",
+        "label": "cisplatin",
+        "degree": 23
+      },
+      {
+        "mesh": "D016190",
+        "label": "carboplatin",
+        "degree": 23
+      },
+      {
+        "mesh": "D003907",
+        "label": "dexamethasone",
+        "degree": 22
+      },
+      {
+        "mesh": "D014635",
+        "label": "VPA",
+        "degree": 21
+      },
+      {
+        "mesh": "D006493",
+        "label": "heparin",
+        "degree": 20
+      },
+      {
+        "mesh": "D008094",
+        "label": "lithium",
+        "degree": 19
+      },
+      {
+        "mesh": "D017239",
+        "label": "paclitaxel",
+        "degree": 19
+      },
+      {
+        "mesh": "D014750",
+        "label": "vincristine",
+        "degree": 18
+      },
+      {
+        "mesh": "D002220",
+        "label": "carbamazepine",
+        "degree": 18
+      }
+    ],
+    "most_induced_diseases": [
+      {
+        "mesh": "D007022",
+        "label": "hypotension",
+        "degree": 60
+      },
+      {
+        "mesh": "D012640",
+        "label": "seizures",
+        "degree": 59
+      },
+      {
+        "mesh": "D056486",
+        "label": "hepatitis",
+        "degree": 42
+      },
+      {
+        "mesh": "D007674",
+        "label": "nephrotoxicity",
+        "degree": 39
+      },
+      {
+        "mesh": "D001919",
+        "label": "bradycardia",
+        "degree": 39
+      },
+      {
+        "mesh": "D058186",
+        "label": "acute renal failure",
+        "degree": 38
+      },
+      {
+        "mesh": "D006973",
+        "label": "hypertension",
+        "degree": 34
+      },
+      {
+        "mesh": "D009325",
+        "label": "nausea",
+        "degree": 30
+      },
+      {
+        "mesh": "D013921",
+        "label": "thrombocytopenia",
+        "degree": 26
+      },
+      {
+        "mesh": "D009503",
+        "label": "neutropenia",
+        "degree": 23
+      },
+      {
+        "mesh": "D008569",
+        "label": "memory impairment",
+        "degree": 22
+      },
+      {
+        "mesh": "D002375",
+        "label": "catalepsy",
+        "degree": 22
+      },
+      {
+        "mesh": "D014839",
+        "label": "vomiting",
+        "degree": 21
+      },
+      {
+        "mesh": "D006261",
+        "label": "headache",
+        "degree": 21
+      },
+      {
+        "mesh": "D001145",
+        "label": "arrhythmia",
+        "degree": 21
+      }
+    ],
+    "top_pagerank": [
+      {
+        "mesh": "D012640",
+        "label": "seizures",
+        "kind": "Disease",
+        "pagerank": 0.01342
+      },
+      {
+        "mesh": "D007022",
+        "label": "hypotension",
+        "kind": "Disease",
+        "pagerank": 0.01268
+      },
+      {
+        "mesh": "D056486",
+        "label": "hepatitis",
+        "kind": "Disease",
+        "pagerank": 0.00894
+      },
+      {
+        "mesh": "D058186",
+        "label": "acute renal failure",
+        "kind": "Disease",
+        "pagerank": 0.00671
+      },
+      {
+        "mesh": "D007674",
+        "label": "nephrotoxicity",
+        "kind": "Disease",
+        "pagerank": 0.00662
+      },
+      {
+        "mesh": "D002375",
+        "label": "catalepsy",
+        "kind": "Disease",
+        "pagerank": 0.00617
+      },
+      {
+        "mesh": "D006973",
+        "label": "hypertension",
+        "kind": "Disease",
+        "pagerank": 0.00609
+      },
+      {
+        "mesh": "D001919",
+        "label": "bradycardia",
+        "kind": "Disease",
+        "pagerank": 0.0058
+      },
+      {
+        "mesh": "D006948",
+        "label": "hyperactivity",
+        "kind": "Disease",
+        "pagerank": 0.00409
+      },
+      {
+        "mesh": "D016171",
+        "label": "torsade de pointes",
+        "kind": "Disease",
+        "pagerank": 0.00391
+      },
+      {
+        "mesh": "D000743",
+        "label": "hemolytic anemia",
+        "kind": "Disease",
+        "pagerank": 0.00388
+      },
+      {
+        "mesh": "D001145",
+        "label": "arrhythmia",
+        "kind": "Disease",
+        "pagerank": 0.00386
+      },
+      {
+        "mesh": "D000647",
+        "label": "amnesia",
+        "kind": "Disease",
+        "pagerank": 0.00353
+      },
+      {
+        "mesh": "D006261",
+        "label": "headache",
+        "kind": "Disease",
+        "pagerank": 0.0035
+      },
+      {
+        "mesh": "D009325",
+        "label": "nausea",
+        "kind": "Disease",
+        "pagerank": 0.0033
+      }
+    ]
+  },
+  "communities": [
+    {
+      "community": 0,
+      "size": 111,
+      "chemicals": [
+        "5-FU",
+        "carboplatin",
+        "heparin",
+        "paclitaxel",
+        "AZT",
+        "cis-RA",
+        "methotrexate",
+        "thalidomide"
+      ],
+      "diseases": [
+        "thrombocytopenia",
+        "neutropenia",
+        "vomiting",
+        "peripheral neuropathy",
+        "anemia",
+        "neurotoxicity",
+        "diarrhea",
+        "leukopenia"
+      ]
+    },
+    {
+      "community": 1,
+      "size": 107,
+      "chemicals": [
+        "morphine",
+        "fluoxetine",
+        "methamphetamine",
+        "nicotine",
+        "amphetamine",
+        "haloperidol",
+        "apomorphine",
+        "levodopa"
+      ],
+      "diseases": [
+        "catalepsy",
+        "hyperactivity",
+        "dyskinesias",
+        "EPS",
+        "fever",
+        "psychosis",
+        "NMS",
+        "rigidity"
+      ]
+    },
+    {
+      "community": 2,
+      "size": 105,
+      "chemicals": [
+        "tacrolimus",
+        "cisplatin",
+        "indomethacin",
+        "bupivacaine",
+        "cyclosporine",
+        "EACA",
+        "gentamicin",
+        "rifampin"
+      ],
+      "diseases": [
+        "nephrotoxicity",
+        "acute renal failure",
+        "renal failure",
+        "myopathy",
+        "rhabdomyolysis",
+        "hearing loss",
+        "hyperkalemia",
+        "fibrosis"
+      ]
+    },
+    {
+      "community": 3,
+      "size": 91,
+      "chemicals": [
+        "methyldopa",
+        "verapamil",
+        "methylprednisolone",
+        "propofol",
+        "fentanyl",
+        "diltiazem",
+        "timolol",
+        "pethidine"
+      ],
+      "diseases": [
+        "hypotension",
+        "bradycardia",
+        "cardiac arrest",
+        "angioedema",
+        "fatigue",
+        "atrioventricular block",
+        "heart block",
+        "decreased cardiac output"
+      ]
+    },
+    {
+      "community": 4,
+      "size": 89,
+      "chemicals": [
+        "amiodarone",
+        "acetaminophen",
+        "sulphasalazine",
+        "PTU",
+        "carbimazole",
+        "prednisone",
+        "troleandomycin",
+        "azathioprine"
+      ],
+      "diseases": [
+        "hepatitis",
+        "cholestasis",
+        "coma",
+        "jaundice",
+        "ALF",
+        "maculopapular eruption",
+        "focal segmental glomerulosclerosis",
+        "systemic lupus erythematosus"
+      ]
+    },
+    {
+      "community": 5,
+      "size": 86,
+      "chemicals": [
+        "VPA",
+        "carbachol",
+        "phenytoin",
+        "venlafaxine",
+        "quinine",
+        "tranylcypromine",
+        "etoposide",
+        "theophylline"
+      ],
+      "diseases": [
+        "tremor",
+        "confusion",
+        "encephalopathy",
+        "cardiovascular disease",
+        "tonic-clonic seizures",
+        "overdose",
+        "erectile dysfunction",
+        "hypokalemia"
+      ]
+    },
+    {
+      "community": 6,
+      "size": 70,
+      "chemicals": [
+        "cocaine",
+        "caffeine",
+        "pilocarpine",
+        "lidocaine",
+        "isoniazid",
+        "bupropion",
+        "PTZ",
+        "clomipramine"
+      ],
+      "diseases": [
+        "seizures",
+        "anxiety",
+        "neuropathy",
+        "neuronal loss",
+        "SAH",
+        "brain damage",
+        "sleep disturbance",
+        "status epilepticus"
+      ]
+    },
+    {
+      "community": 7,
+      "size": 59,
+      "chemicals": [
+        "carbamazepine",
+        "ciprofloxacin",
+        "dobutamine",
+        "ribavirin",
+        "co-trimoxazole",
+        "nicergoline",
+        "AX",
+        "pegylated interferon"
+      ],
+      "diseases": [
+        "mania",
+        "hemolytic anemia",
+        "hypersensitivity",
+        "interstitial nephritis",
+        "myocarditis",
+        "liver disease",
+        "left ventricular dysfunction",
+        "ocular dyskinesias"
+      ]
+    },
+    {
+      "community": 8,
+      "size": 55,
+      "chemicals": [
+        "isoproterenol",
+        "oral contraceptives",
+        "progesterone",
+        "alcohol",
+        "estrogen",
+        "estradiol",
+        "DES",
+        "bromocriptine"
+      ],
+      "diseases": [
+        "myocardial infarction",
+        "tachycardia",
+        "VTE",
+        "stroke",
+        "dyspnea",
+        "ischemic stroke",
+        "dementia",
+        "liver cancer"
+      ]
+    },
+    {
+      "community": 9,
+      "size": 54,
+      "chemicals": [
+        "cyclophosphamide",
+        "ifosfamide",
+        "warfarin",
+        "aspirin",
+        "PPA",
+        "naproxen",
+        "phenacetin",
+        "indinavir"
+      ],
+      "diseases": [
+        "cystitis",
+        "bleeding",
+        "gastric hemorrhage",
+        "ICH",
+        "ESRD",
+        "atherosclerosis",
+        "renal papillary necrosis",
+        "bladder cancer"
+      ]
+    }
+  ],
+  "novel_signal_hypotheses": [
+    {
+      "chemical": "bupropion",
+      "disease": "hypotension",
+      "score": 2.773,
+      "chemical_mesh": "D016642",
+      "disease_mesh": "D007022"
+    },
+    {
+      "chemical": "isradipine",
+      "disease": "nausea",
+      "score": 2.482,
+      "chemical_mesh": "D017275",
+      "disease_mesh": "D009325"
+    },
+    {
+      "chemical": "pinacidil",
+      "disease": "bradycardia",
+      "score": 2.432,
+      "chemical_mesh": "D020110",
+      "disease_mesh": "D001919"
+    },
+    {
+      "chemical": "cromakalim",
+      "disease": "bradycardia",
+      "score": 2.432,
+      "chemical_mesh": "D019806",
+      "disease_mesh": "D001919"
+    },
+    {
+      "chemical": "TMP",
+      "disease": "bradycardia",
+      "score": 2.432,
+      "chemical_mesh": "D014294",
+      "disease_mesh": "D001919"
+    },
+    {
+      "chemical": "milrinone",
+      "disease": "bradycardia",
+      "score": 2.378,
+      "chemical_mesh": "D020105",
+      "disease_mesh": "D001919"
+    },
+    {
+      "chemical": "Viracept",
+      "disease": "hypotension",
+      "score": 2.378,
+      "chemical_mesh": "D019888",
+      "disease_mesh": "D007022"
+    },
+    {
+      "chemical": "vasopressin",
+      "disease": "bradycardia",
+      "score": 2.378,
+      "chemical_mesh": "D014667",
+      "disease_mesh": "D001919"
+    },
+    {
+      "chemical": "d-tubocurarine",
+      "disease": "bradycardia",
+      "score": 2.378,
+      "chemical_mesh": "D014403",
+      "disease_mesh": "D001919"
+    },
+    {
+      "chemical": "oxygen",
+      "disease": "bradycardia",
+      "score": 2.378,
+      "chemical_mesh": "D010100",
+      "disease_mesh": "D001919"
+    },
+    {
+      "chemical": "nimodipine",
+      "disease": "bradycardia",
+      "score": 2.378,
+      "chemical_mesh": "D009553",
+      "disease_mesh": "D001919"
+    },
+    {
+      "chemical": "hydralazine",
+      "disease": "bradycardia",
+      "score": 2.378,
+      "chemical_mesh": "D006830",
+      "disease_mesh": "D001919"
+    },
+    {
+      "chemical": "edrophonium",
+      "disease": "hypotension",
+      "score": 2.378,
+      "chemical_mesh": "D004491",
+      "disease_mesh": "D007022"
+    },
+    {
+      "chemical": "domperidone",
+      "disease": "hypotension",
+      "score": 2.378,
+      "chemical_mesh": "D004294",
+      "disease_mesh": "D007022"
+    },
+    {
+      "chemical": "chondroitin sulfate",
+      "disease": "bradycardia",
+      "score": 2.378,
+      "chemical_mesh": "D002809",
+      "disease_mesh": "D001919"
+    },
+    {
+      "chemical": "ATP",
+      "disease": "bradycardia",
+      "score": 2.378,
+      "chemical_mesh": "D000255",
+      "disease_mesh": "D001919"
+    },
+    {
+      "chemical": "acetylcholine",
+      "disease": "bradycardia",
+      "score": 2.378,
+      "chemical_mesh": "D000109",
+      "disease_mesh": "D001919"
+    },
+    {
+      "chemical": "remifentanil",
+      "disease": "bradycardia",
+      "score": 2.378,
+      "chemical_mesh": "C071741",
+      "disease_mesh": "D001919"
+    },
+    {
+      "chemical": "terbinafine",
+      "disease": "hypotension",
+      "score": 2.378,
+      "chemical_mesh": "C041359",
+      "disease_mesh": "D007022"
+    },
+    {
+      "chemical": "helodermin",
+      "disease": "bradycardia",
+      "score": 2.378,
+      "chemical_mesh": "C040442",
+      "disease_mesh": "D001919"
+    }
+  ],
+  "sql_examples": {
+    "top_inducer_chemicals": [
+      {
+        "name": "doxorubicin",
+        "n_diseases": 39,
+        "n_evidence": 84.0
+      },
+      {
+        "name": "cocaine",
+        "n_diseases": 39,
+        "n_evidence": 58.0
+      },
+      {
+        "name": "amiodarone",
+        "n_diseases": 32,
+        "n_evidence": 37.0
+      },
+      {
+        "name": "tacrolimus",
+        "n_diseases": 28,
+        "n_evidence": 35.0
+      },
+      {
+        "name": "5-FU",
+        "n_diseases": 26,
+        "n_evidence": 29.0
+      },
+      {
+        "name": "morphine",
+        "n_diseases": 23,
+        "n_evidence": 29.0
+      },
+      {
+        "name": "cisplatin",
+        "n_diseases": 23,
+        "n_evidence": 27.0
+      },
+      {
+        "name": "carboplatin",
+        "n_diseases": 23,
+        "n_evidence": 25.0
+      },
+      {
+        "name": "dexamethasone",
+        "n_diseases": 22,
+        "n_evidence": 31.0
+      },
+      {
+        "name": "VPA",
+        "n_diseases": 21,
+        "n_evidence": 29.0
+      }
+    ],
+    "most_implicated_diseases": [
+      {
+        "name": "hypotension",
+        "n_chemicals": 60,
+        "n_evidence": 101.0
+      },
+      {
+        "name": "seizures",
+        "n_chemicals": 59,
+        "n_evidence": 116.0
+      },
+      {
+        "name": "hepatitis",
+        "n_chemicals": 42,
+        "n_evidence": 52.0
+      },
+      {
+        "name": "nephrotoxicity",
+        "n_chemicals": 39,
+        "n_evidence": 64.0
+      },
+      {
+        "name": "bradycardia",
+        "n_chemicals": 39,
+        "n_evidence": 54.0
+      },
+      {
+        "name": "acute renal failure",
+        "n_chemicals": 38,
+        "n_evidence": 52.0
+      },
+      {
+        "name": "hypertension",
+        "n_chemicals": 34,
+        "n_evidence": 51.0
+      },
+      {
+        "name": "nausea",
+        "n_chemicals": 30,
+        "n_evidence": 31.0
+      },
+      {
+        "name": "thrombocytopenia",
+        "n_chemicals": 26,
+        "n_evidence": 40.0
+      },
+      {
+        "name": "neutropenia",
+        "n_chemicals": 23,
+        "n_evidence": 30.0
+      }
+    ],
+    "best_evidenced_signals": [
+      {
+        "chemical_name": "levodopa",
+        "disease_name": "dyskinesias",
+        "n_pmids": 25
+      },
+      {
+        "chemical_name": "haloperidol",
+        "disease_name": "catalepsy",
+        "n_pmids": 18
+      },
+      {
+        "chemical_name": "pilocarpine",
+        "disease_name": "status epilepticus",
+        "n_pmids": 16
+      },
+      {
+        "chemical_name": "doxorubicin",
+        "disease_name": "cardiomyopathy",
+        "n_pmids": 14
+      },
+      {
+        "chemical_name": "pilocarpine",
+        "disease_name": "seizures",
+        "n_pmids": 13
+      },
+      {
+        "chemical_name": "PAN",
+        "disease_name": "proteinuria",
+        "n_pmids": 11
+      },
+      {
+        "chemical_name": "scopolamine",
+        "disease_name": "amnesia",
+        "n_pmids": 11
+      },
+      {
+        "chemical_name": "cocaine",
+        "disease_name": "seizures",
+        "n_pmids": 11
+      },
+      {
+        "chemical_name": "cyclophosphamide",
+        "disease_name": "cystitis",
+        "n_pmids": 10
+      },
+      {
+        "chemical_name": "heparin",
+        "disease_name": "thrombocytopenia",
+        "n_pmids": 10
+      }
+    ]
+  }
+}

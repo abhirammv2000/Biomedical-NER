@@ -1,0 +1,85 @@
+{
+  "per_split": {
+    "train": {
+      "summary": {
+        "documents": 500,
+        "chemical_mentions": 5203,
+        "disease_mentions": 4182,
+        "cid_relations": 1038,
+        "unlinked_mentions": 76
+      },
+      "offsets": {
+        "total_entities": 9385,
+        "offset_mismatches": 0,
+        "examples": []
+      },
+      "labels": {
+        "invalid_type_count": 0,
+        "invalid_types": {}
+      },
+      "duplicates": {
+        "duplicate_abstract_groups": 0
+      },
+      "relation_consistency": {
+        "total_relations": 1038,
+        "dangling_relations": 0
+      }
+    },
+    "dev": {
+      "summary": {
+        "documents": 500,
+        "chemical_mentions": 5347,
+        "disease_mentions": 4244,
+        "cid_relations": 1012,
+        "unlinked_mentions": 59
+      },
+      "offsets": {
+        "total_entities": 9591,
+        "offset_mismatches": 0,
+        "examples": []
+      },
+      "labels": {
+        "invalid_type_count": 0,
+        "invalid_types": {}
+      },
+      "duplicates": {
+        "duplicate_abstract_groups": 0
+      },
+      "relation_consistency": {
+        "total_relations": 1012,
+        "dangling_relations": 0
+      }
+    },
+    "test": {
+      "summary": {
+        "documents": 500,
+        "chemical_mentions": 5385,
+        "disease_mentions": 4424,
+        "cid_relations": 1066,
+        "unlinked_mentions": 91
+      },
+      "offsets": {
+        "total_entities": 9809,
+        "offset_mismatches": 0,
+        "examples": []
+      },
+      "labels": {
+        "invalid_type_count": 0,
+        "invalid_types": {}
+      },
+      "duplicates": {
+        "duplicate_abstract_groups": 0
+      },
+      "relation_consistency": {
+        "total_relations": 1066,
+        "dangling_relations": 0
+      }
+    }
+  },
+  "global": {
+    "split_disjoint": {
+      "disjoint": true,
+      "overlaps": {}
+    }
+  }
+}

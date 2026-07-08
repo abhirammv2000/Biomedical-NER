@@ -1,0 +1,48 @@
+# Base configuration for PCS-SignalMiner
+seed: 42
+
+paths:
+  data_raw: data/raw
+  data_interim: data/interim
+  data_processed: data/processed
+  data_external: data/external
+  models: models
+  reports: reports
+  figures: reports/figures
+
+data:
+  # BC5CDR via HuggingFace datasets (BioCreative V CDR)
+  hf_dataset: "tner/bc5cdr"          # fallback loaders handled in code
+  bc5cdr_pubtator_urls:
+    train: "https://raw.githubusercontent.com/JHnlp/BioCreative-V-CDR-Corpus/master/CDR_Data/CDR.Corpus.v010516/CDR_TrainingSet.PubTator.txt"
+    dev: "https://raw.githubusercontent.com/JHnlp/BioCreative-V-CDR-Corpus/master/CDR_Data/CDR.Corpus.v010516/CDR_DevelopmentSet.PubTator.txt"
+    test: "https://raw.githubusercontent.com/JHnlp/BioCreative-V-CDR-Corpus/master/CDR_Data/CDR.Corpus.v010516/CDR_TestSet.PubTator.txt"
+
+ner:
+  base_model: "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext"  # PubMedBERT
+  max_length: 256
+  lr: 3.0e-5
+  epochs: 5          # GPU (T4); PubMedBERT converges in 4-5 epochs on BC5CDR
+  batch_size: 16
+  labels: ["O", "B-Chemical", "I-Chemical", "B-Disease", "I-Disease"]
+
+relation:
+  base_model: "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext"
+  max_length: 512
+  lr: 2.0e-5
+  epochs: 5
+  batch_size: 16     # T4 16GB handles batch 16 @ 512 tokens for base model
+  negative_sampling: true
+
+genai:
+  model: "claude-opus-4-8"
+  max_tokens: 4096
+  temperature: 0.0
+  few_shot_examples: 5
+
+graph:
+  duckdb_path: data/processed/signals.duckdb
+
+topics:
+  embedding_model: "sentence-transformers/all-MiniLM-L6-v2"
+  min_topic_size: 15

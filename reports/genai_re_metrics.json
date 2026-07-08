@@ -1,0 +1,13 @@
+{
+  "mode": "mock",
+  "documents": 100,
+  "precision": 0.3327,
+  "recall": 0.7289,
+  "f1": 0.4568,
+  "tp": 164,
+  "fp": 329,
+  "fn": 61,
+  "total_cost_usd": 0.0,
+  "mean_latency_s": null,
+  "cost_per_doc_usd": 0.0
+}

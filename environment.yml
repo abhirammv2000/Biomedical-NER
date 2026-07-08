@@ -1,0 +1,40 @@
+name: biomed-ner
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      # core data science
+      - pandas
+      - numpy
+      - scikit-learn
+      - matplotlib
+      - seaborn
+      - scipy
+      # NLP / modeling
+      - torch
+      - transformers
+      - datasets
+      - accelerate
+      - seqeval
+      - evaluate
+      # entity linking / ontology
+      - requests
+      # relation extraction / topics
+      - bertopic
+      - sentence-transformers
+      # graph + SQL
+      - networkx
+      - duckdb
+      # GenAI
+      - anthropic
+      # dashboard
+      - streamlit
+      - plotly
+      # utils
+      - pyyaml
+      - tqdm
+      - python-dotenv
+      - ipykernel
+      - jupyter

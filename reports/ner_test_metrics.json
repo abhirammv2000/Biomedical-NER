@@ -1,0 +1,6 @@
+{
+  "precision": 0.8304373177842566,
+  "recall": 0.8924677277854368,
+  "f1": 0.8603358704844751,
+  "report": "              precision    recall  f1-score   support\n\n    Chemical     0.8913    0.9311    0.9108      4352\n     Disease     0.7617    0.8462    0.8017      3627\n\n   micro avg     0.8304    0.8925    0.8603      7979\n   macro avg     0.8265    0.8886    0.8562      7979\nweighted avg     0.8324    0.8925    0.8612      7979\n"
+}

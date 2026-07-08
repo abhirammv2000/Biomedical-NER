@@ -1,0 +1,51 @@
+# Data (tracked by docs/DATA_CARD.md, not committed)
+data/raw/
+data/interim/
+data/processed/
+data/external/
+!data/**/.gitkeep
+
+# Models & artifacts
+models/
+*.bin
+*.safetensors
+*.pt
+*.ckpt
+*.duckdb
+*.sqlite
+
+# Payload tarball for cloud training
+.pcs_payload.tar.gz
+
+# Secrets
+.env
+*.key
+secrets/
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Notebook outputs are stripped pre-commit; keep checkpoints out
+notebooks/.ipynb_checkpoints/
+
+# Logs & local agent config
+*.log
+reports/*.log
+.claude/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Reports build artifacts
+reports/figures/*.tmp

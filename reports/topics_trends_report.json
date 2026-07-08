@@ -1,0 +1,142 @@
+{
+  "time_series": {
+    "years_covered": [
+      1968,
+      2016
+    ],
+    "total_with_year": 3116,
+    "busiest_years": {
+      "2014": 204,
+      "2009": 165,
+      "2007": 142,
+      "2001": 136,
+      "2008": 123
+    }
+  },
+  "topics": {
+    "n_topics": 26,
+    "n_outliers": 513,
+    "top_topics": [
+      {
+        "topic": 0,
+        "count": 86,
+        "terms": [
+          "liver",
+          "hepatitis",
+          "acute",
+          "failure",
+          "patient",
+          "hepatic"
+        ]
+      },
+      {
+        "topic": 1,
+        "count": 69,
+        "terms": [
+          "bupivacaine",
+          "group",
+          "patients",
+          "anaesthesia",
+          "pain",
+          "myalgia"
+        ]
+      },
+      {
+        "topic": 2,
+        "count": 57,
+        "terms": [
+          "pilocarpine",
+          "seizures",
+          "rats",
+          "seizure",
+          "status",
+          "induced"
+        ]
+      },
+      {
+        "topic": 3,
+        "count": 55,
+        "terms": [
+          "women",
+          "cancer",
+          "prolactin",
+          "breast",
+          "risk",
+          "breast cancer"
+        ]
+      },
+      {
+        "topic": 4,
+        "count": 51,
+        "terms": [
+          "renal",
+          "rats",
+          "nephropathy",
+          "gentamicin",
+          "tubular",
+          "glomerular"
+        ]
+      },
+      {
+        "topic": 5,
+        "count": 50,
+        "terms": [
+          "syndrome",
+          "haloperidol",
+          "neuroleptic",
+          "placebo",
+          "symptoms",
+          "akathisia"
+        ]
+      },
+      {
+        "topic": 6,
+        "count": 47,
+        "terms": [
+          "catalepsy",
+          "induced",
+          "amphetamine",
+          "haloperidol",
+          "dopamine",
+          "receptor"
+        ]
+      },
+      {
+        "topic": 7,
+        "count": 46,
+        "terms": [
+          "pressure",
+          "blood",
+          "hypertension",
+          "blood pressure",
+          "hypotension",
+          "arterial"
+        ]
+      },
+      {
+        "topic": 8,
+        "count": 40,
+        "terms": [
+          "doxorubicin",
+          "cardiotoxicity",
+          "cardiac",
+          "adriamycin",
+          "heart",
+          "cardiomyopathy"
+        ]
+      },
+      {
+        "topic": 9,
+        "count": 38,
+        "terms": [
+          "pain",
+          "morphine",
+          "migraine",
+          "headache",
+          "ketamine",
+          "induced"
+        ]
+      }
+    ]
+  }
+}

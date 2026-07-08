@@ -1,0 +1,43 @@
+# Core data science
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+scipy
+statsmodels
+tabulate
+
+# NLP / modeling
+torch
+transformers
+datasets
+accelerate
+seqeval
+evaluate
+
+# Entity linking / ontology
+requests
+
+# Relation extraction / topics
+bertopic
+sentence-transformers
+
+# Graph + SQL
+networkx
+duckdb
+
+# GenAI
+anthropic
+
+# Dashboard
+streamlit
+plotly
+
+# Utils
+pyyaml
+tqdm
+python-dotenv
+ipykernel
+jupyter
+pytest

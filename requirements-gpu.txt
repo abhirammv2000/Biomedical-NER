@@ -1,0 +1,32 @@
+# GPU training dependencies.
+# Install CUDA torch first (example: CUDA 12.1), then the rest:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
+#   pip install -r requirements-gpu.txt
+#
+# Everything except torch matches requirements.txt; torch is installed
+# separately with the CUDA wheel index above.
+
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+scipy
+statsmodels
+tabulate
+transformers
+datasets
+accelerate
+seqeval
+evaluate
+requests
+bertopic
+sentence-transformers
+networkx
+duckdb
+anthropic
+streamlit
+plotly
+pyyaml
+tqdm
+python-dotenv
