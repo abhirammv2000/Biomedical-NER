@@ -1,4 +1,4 @@
-"""Stage — fit the MeSH dictionary normalizer on train and evaluate on dev/test.
+"""Stage: fit the MeSH dictionary normalizer on train and evaluate on dev/test.
 
 Run:
     python scripts/run_linking.py

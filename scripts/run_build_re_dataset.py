@@ -1,4 +1,4 @@
-"""Stage — build the document-level relation-extraction candidate dataset.
+"""Build the document-level relation-extraction candidate dataset.
 
 For each split, enumerate (chemical concept, disease concept) candidate pairs,
 label them against gold CID relations, and report class balance plus the

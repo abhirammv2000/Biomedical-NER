@@ -1,29 +1,29 @@
 # PCS-SignalMiner
 
-**Literature-based drug-safety signal mining for Preclinical Safety.**
+Literature-based drug-safety signal mining for Preclinical Safety.
 
-PCS-SignalMiner reads PubMed abstracts and automatically extracts, normalizes,
-and ranks **"chemical induces adverse condition"** signals — assembling them into
-a queryable **toxicology knowledge graph** with a stakeholder dashboard.
+PCS-SignalMiner reads PubMed abstracts, extracts and normalizes "chemical
+induces adverse condition" signals, and assembles them into a queryable
+toxicology knowledge graph with a stakeholder dashboard.
 
-Built on the **BC5CDR** corpus (BioCreative V Chemical-Disease Relation), whose
-relations were curated by **CTD (Comparative Toxicogenomics Database)** — making
+Built on the **BC5CDR** corpus (BioCreative V Chemical-Disease Relation), with
+relations curated by **CTD** (Comparative Toxicogenomics Database), which makes
 it a realistic proxy for literature-based safety surveillance.
 
-> Why it exists: drug-safety teams need to know *which chemicals are reported to
-> induce which adverse conditions*, with evidence and provenance. This system
-> automates that mining end-to-end.
+Drug-safety teams need to know which chemicals are reported to induce which
+adverse conditions, with evidence and provenance. This pipeline automates that
+mining end to end.
 
 ## What it does
-1. **NER** — finds chemical & disease mentions (fine-tuned PubMedBERT).
-2. **Normalization** — links mentions to MeSH concept IDs.
-3. **Relation extraction** — decides, document-level, which chemical→disease
-   pairs are *chemical-induced disease* (supervised model **and** a Claude-based
+1. **NER**: finds chemical & disease mentions (fine-tuned PubMedBERT).
+2. **Normalization**: links mentions to MeSH concept IDs.
+3. **Relation extraction**: decides, document-level, which chemical/disease
+   pairs are *chemical-induced disease* (a supervised model and a Claude-based
    GenAI approach, compared head-to-head).
-4. **Knowledge graph** — assembles signals into a DuckDB + NetworkX graph;
+4. **Knowledge graph**: assembles signals into a DuckDB + NetworkX graph and
    runs graph algorithms (centrality, communities, link prediction).
-5. **Analytics** — topic modeling, clustering, and time-series trends of signals.
-6. **Dashboard** — search a drug → see reported toxicities, evidence, and graph
+5. **Analytics**: topic modeling, clustering, and time-series trends of signals.
+6. **Dashboard**: search a drug, see reported toxicities, evidence, and graph
    neighborhood.
 
 ## Quickstart
@@ -37,9 +37,9 @@ streamlit run app/dashboard.py            # dashboard
 ```
 
 ## Documentation
-- [PROJECT_PLAN.md](PROJECT_PLAN.md) — full plan, stages, evaluation, JD mapping.
-- [docs/DATA_CARD.md](docs/DATA_CARD.md) — datasets, licensing, provenance.
-- [docs/GOVERNANCE.md](docs/GOVERNANCE.md) — data governance & compliance notes.
+- [PROJECT_PLAN.md](PROJECT_PLAN.md): full plan, stages, evaluation, JD mapping.
+- [docs/DATA_CARD.md](docs/DATA_CARD.md): datasets, licensing, provenance.
+- [docs/GOVERNANCE.md](docs/GOVERNANCE.md): data governance & compliance notes.
 
 ## Results at a glance
 - **Data:** 1,500 abstracts parsed; QC clean (0 offset errors, splits disjoint, 3,116 CID relations).
@@ -47,7 +47,7 @@ streamlit run app/dashboard.py            # dashboard
 - **Normalization:** MeSH dictionary linker, **~98% precision-when-predicted** (+fuzzy fallback).
 - **Knowledge graph:** 1,262 nodes / 2,434 edges in DuckDB; centrality, **10 toxicity communities**, link-prediction hypotheses.
 - **Biostatistics:** **49 chemicals** significantly enriched as inducers (Fisher exact, BH-FDR q<0.05).
-- **Topics/trends:** 26 coherent BERTopic topics; signal time-series 1968–2016 (PubMed years via E-utilities).
+- **Topics/trends:** 26 coherent BERTopic topics; signal time-series 1968-2016 (PubMed years via E-utilities).
 - **GenAI study:** Claude Opus 4.8 structured-output relation extraction vs. supervised, with cost/latency.
 - **Supervised models:** PubMedBERT NER + relation trained on **GCP T4** (`scripts/gcp_train.sh`).
 

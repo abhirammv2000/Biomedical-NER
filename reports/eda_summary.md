@@ -1,11 +1,11 @@
-# EDA Summary — BC5CDR
+# EDA Summary: BC5CDR
 
 - Documents: **1500** (500 train / 500 dev / 500 test)
 - Chemical mentions: **15935**, Disease mentions: **12850**
 - Unique chemical concepts (MeSH): **1269**, unique disease concepts: **1081**
 - Gold CID relations: **3116**
 
-## Biostatistics — chemicals enriched as disease inducers
+## Biostatistics: chemicals enriched as disease inducers
 Fisher's exact test (one-sided) with Benjamini-Hochberg FDR correction. **49** chemicals are significantly enriched (q < 0.05) for chemical-induced-disease relations vs. the rest of the corpus.
 
 Top 10 by significance:

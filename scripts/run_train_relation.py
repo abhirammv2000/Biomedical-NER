@@ -1,4 +1,4 @@
-"""Stage — train a document-level chemical-induced-disease (CID) relation
+"""Stage: train a document-level chemical-induced-disease (CID) relation
 classifier on BC5CDR candidate pairs.
 
 Entity-marker featurization + PubMedBERT sequence classification. Evaluated with

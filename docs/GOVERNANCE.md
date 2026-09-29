@@ -17,8 +17,8 @@ drug-safety environment, even though it uses only public literature data.
 - Automated data-quality checks at ingestion (offset validity, label
   consistency, split disjointness, MeSH resolvability).
 - Model evaluation on the held-out official test split only; no test leakage.
-- Extracted signals are framed as **hypotheses for review**, never as
-  confirmed safety findings — a human safety scientist remains in the loop.
+- Extracted signals are framed as **hypotheses for review**, not confirmed
+  safety findings. A human safety scientist remains in the loop.
 
 ## Responsible-use notes
 - GenAI (LLM) outputs are validated against structured references and never

@@ -1,7 +1,7 @@
 """Entity normalization: map chemical/disease surface mentions to MeSH concept
 ids.
 
-Implements a dictionary normalizer fitted on the training split — the standard
+Implements a dictionary normalizer fitted on the training split, the standard
 strong baseline for BC5CDR normalization. A surface form is mapped to the most
 frequent MeSH id observed for that (surface, type) in training; light
 normalization (lowercasing, whitespace/punctuation trimming) improves recall on

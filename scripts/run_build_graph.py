@@ -1,4 +1,4 @@
-"""Stage — build the safety knowledge graph, load DuckDB, run graph algorithms.
+"""Build the safety knowledge graph, load DuckDB, run graph algorithms.
 
 Source = gold CID relations across all splits (dev path). Swap
 `signals_from_gold` for predicted relations once the relation model is trained.

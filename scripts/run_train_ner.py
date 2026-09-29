@@ -1,4 +1,4 @@
-"""Stage — fine-tune PubMedBERT for chemical/disease NER on BC5CDR.
+"""Stage: fine-tune PubMedBERT for chemical/disease NER on BC5CDR.
 
 Document-level token classification with offset-based BIO alignment, evaluated
 with seqeval entity-level F1 (per type + micro).

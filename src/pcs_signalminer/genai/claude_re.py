@@ -6,9 +6,9 @@ which (chemical, disease) pairs are reported as chemical-INDUCED disease. This i
 the GenAI arm of the build-vs-buy study against the fine-tuned encoder.
 
 Uses the Anthropic SDK with structured outputs (output_config.format) so the
-response is guaranteed-parseable JSON — no prefill, no temperature (both rejected
-on Opus 4.8). A deterministic mock path lets the pipeline run end-to-end without
-an API key (set PCS_GENAI_MOCK=1 or pass mock=True).
+response is guaranteed-parseable JSON. No prefill, no temperature; both are
+rejected on Opus 4.8. A deterministic mock path lets the pipeline run end-to-end
+without an API key (set PCS_GENAI_MOCK=1 or pass mock=True).
 """
 from __future__ import annotations
 
@@ -81,7 +81,7 @@ def build_user_prompt(text: str,
 
 
 # --------------------------------------------------------------------------- #
-# Mock path — deterministic co-occurrence-in-same-sentence heuristic.
+# Mock path: deterministic co-occurrence-in-same-sentence heuristic.
 # Lets the whole evaluation pipeline run (and be unit-tested) without a key.
 # --------------------------------------------------------------------------- #
 def _mock_extract(text: str,

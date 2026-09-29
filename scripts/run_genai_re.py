@@ -1,11 +1,11 @@
-"""GenAI study — Claude vs. the supervised model on document-level CID relation
+"""GenAI study: Claude vs. the supervised model on document-level CID relation
 extraction.
 
 For each test abstract, give Claude the gold chemical/disease concepts (same
 inputs the supervised model sees) and ask which pairs are chemical-induced
 disease. Score against gold at the concept-pair level, and report cost + latency.
 
-Run (mock, no API key needed — validates the pipeline):
+Run (mock, no API key needed, validates the pipeline):
     python scripts/run_genai_re.py --mock --limit 50
 
 Run for real (needs ANTHROPIC_API_KEY in env or .env):

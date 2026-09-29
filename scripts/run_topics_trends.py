@@ -1,4 +1,4 @@
-"""Stage — topic modeling / clustering of abstracts + time-series trends of
+"""Stage: topic modeling / clustering of abstracts + time-series trends of
 safety signals.
 
 1. Fetch PubMed publication years (cached) to add a temporal axis.

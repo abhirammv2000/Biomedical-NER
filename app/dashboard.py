@@ -1,4 +1,4 @@
-"""PCS-SignalMiner — drug-safety signal explorer.
+"""PCS-SignalMiner drug-safety signal explorer.
 
 Run:
     streamlit run app/dashboard.py
@@ -45,7 +45,7 @@ chemicals = load_table("SELECT * FROM chemicals ORDER BY n_diseases DESC")
 diseases = load_table("SELECT * FROM diseases ORDER BY n_chemicals DESC")
 
 st.title("💊 PCS-SignalMiner")
-st.caption("Literature-based drug-safety signal mining (BC5CDR) — chemical-induced "
+st.caption("Literature-based drug-safety signal mining (BC5CDR): chemical-induced "
            "disease signals with provenance, for preclinical safety review.")
 
 c1, c2, c3, c4 = st.columns(4)
@@ -73,7 +73,7 @@ with tab_drug:
         if len(sub):
             fig = px.bar(sub.head(15), x="n_pmids", y="disease_name", orientation="h",
                          labels={"n_pmids": "evidence (PMIDs)", "disease_name": ""},
-                         title=f"Top reported toxicities — {drug}")
+                         title=f"Top reported toxicities for {drug}")
             fig.update_layout(yaxis={"categoryorder": "total ascending"}, height=420)
             st.plotly_chart(fig, use_container_width=True)
     with st.expander("Evidence (source PMIDs)"):
@@ -89,7 +89,7 @@ with tab_graph:
     if not gr:
         st.info("Run `python scripts/run_build_graph.py` to generate graph insights.")
     else:
-        st.subheader("Centrality — who drives the safety graph")
+        st.subheader("Centrality: who drives the safety graph")
         a, b = st.columns(2)
         a.markdown("**Top inducer chemicals** (by # distinct diseases)")
         a.dataframe(pd.DataFrame(gr["centrality"]["top_inducer_chemicals"])[["label", "degree"]]
@@ -102,13 +102,13 @@ with tab_graph:
 
         st.subheader("🔬 Novel safety-signal hypotheses (link prediction)")
         st.caption("Chemical→disease pairs NOT in the literature graph, ranked by "
-                   "similarity to known inducers. Hypotheses for human review — not confirmed findings.")
+                   "similarity to known inducers. Hypotheses for human review, not confirmed findings.")
         st.dataframe(pd.DataFrame(gr["novel_signal_hypotheses"])[["chemical", "disease", "score"]],
                      hide_index=True, use_container_width=True)
 
         st.subheader("🧩 Toxicity communities")
         for c in gr["communities"][:6]:
-            st.markdown(f"**Community {c['community']}** ({c['size']} nodes) — "
+            st.markdown(f"**Community {c['community']}** ({c['size']} nodes): "
                         f"chemicals: {', '.join(c['chemicals'][:5])} … "
                         f"diseases: {', '.join(c['diseases'][:5])}")
 

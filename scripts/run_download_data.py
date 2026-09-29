@@ -1,4 +1,4 @@
-"""Stage 1 — parse the BC5CDR PubTator files, run data-quality checks, and
+"""Stage 1: parse the BC5CDR PubTator files, run data-quality checks, and
 write processed JSONL + a QC report.
 
 Assumes the raw corpus has been extracted to:

@@ -1,4 +1,4 @@
-# PCS-SignalMiner — Project Plan
+# PCS-SignalMiner: Project Plan
 
 **Literature-based Drug-Safety Signal Mining for Preclinical Safety (PCS)**
 
@@ -7,9 +7,9 @@ automatically **extracts, normalizes, and ranks "chemical induces adverse
 condition" signals**, assembling them into a queryable **toxicology knowledge
 graph** with a stakeholder-facing dashboard.
 
-> Target role context: Novartis *Expert Data Science, Preclinical Safety (PCS)* —
-> a drug-safety / toxicology org (works with scientists & pathologists). This
-> project mirrors a real PCS function: surfacing chemical→toxicity signals from
+> Target role context: Novartis *Expert Data Science, Preclinical Safety (PCS)*,
+> a drug-safety / toxicology org that works with scientists & pathologists. This
+> project mirrors a real PCS function: surfacing chemical/toxicity signals from
 > the literature to support safety assessment.
 
 ---
@@ -21,17 +21,17 @@ graph** with a stakeholder-facing dashboard.
 - 4,409 chemical mentions, 5,818 disease mentions, 3,116 chemical-induced-disease
   (CID) relations.
 - Every entity normalized to a **MeSH** concept ID.
-- Relations curated by **CTD (Comparative Toxicogenomics Database)** curators —
+- Relations curated by **CTD (Comparative Toxicogenomics Database)** curators,
   the same toxicogenomics resource used in real drug-safety work.
 
-The NER half of BC5CDR is **saturated** (chem ~93–95 F1, disease ~86–90 F1). We
-treat NER as a solved *component* and put the emphasis on the **unsaturated,
-genuinely hard** parts: document-level relation extraction, entity
+The NER half of BC5CDR is **saturated** (chem ~93-95 F1, disease ~86-90 F1). We
+treat NER as a solved component and put the emphasis on the harder,
+still-open parts: document-level relation extraction, entity
 normalization, a knowledge graph, and a GenAI build-vs-buy study.
 
 ## 2. Design principles
 - **Real-world over leaderboard.** Optimize for a deployable, auditable pipeline,
-  not a single F1 number. Every model decision tied to the safety use case.
+  not a single F1 number. Every model decision ties back to the safety use case.
 - **Reproducible.** Config-driven stages, fixed seeds, deterministic data splits,
   pinned deps, staged `scripts/` entrypoints.
 - **Auditable / governed.** Provenance back to PMIDs on every extracted signal;
@@ -61,8 +61,8 @@ normalization, a knowledge graph, and a GenAI build-vs-buy study.
   relations, normalization-induced errors).
 - **GenAI study:** F1 + $/1k-relations + latency + qualitative failure modes;
   build-vs-buy recommendation.
-- **Graph / signals:** sanity-check top-ranked signals against CTD ground truth;
-  link-prediction held-out evaluation for "novel" signal discovery.
+- **Graph / signals:** sanity-check top-ranked signals against CTD ground truth,
+  plus a link-prediction held-out evaluation for "novel" signal discovery.
 
 ## 5. Stack
 Python 3.11 · pandas/numpy/scikit-learn/matplotlib/seaborn · HuggingFace
@@ -95,5 +95,5 @@ tests/           unit tests for parsers/metrics
 1. Clean, reproducible repo with staged pipeline.
 2. Technical report (modeling + results + error analysis + GenAI build-vs-buy).
 3. Executive one-pager (non-technical, safety-stakeholder framing).
-4. Live Streamlit dashboard (search a drug → reported toxicities + evidence + graph).
+4. Live Streamlit dashboard (search a drug, see reported toxicities + evidence + graph).
 5. Data card + governance/compliance note.

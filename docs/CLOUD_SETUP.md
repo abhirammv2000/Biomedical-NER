@@ -3,7 +3,7 @@
 The training scripts auto-detect CUDA (`fp16` and device placement switch on
 when `torch.cuda.is_available()`), so the same commands run on CPU or GPU.
 
-## Option A — bare GPU VM (any provider: AWS/GCP/Azure/Lambda/RunPod)
+## Option A: bare GPU VM (any provider: AWS/GCP/Azure/Lambda/RunPod)
 
 ```bash
 # 1. clone + enter
@@ -29,10 +29,10 @@ python scripts/run_train_relation.py
 #   models/ner/ and models/relation/ -> copy to local for the dashboard/KG
 ```
 
-Recommended instance: a single 16–24 GB GPU (T4/L4/A10) is plenty for
+Recommended instance: a single 16-24 GB GPU (T4/L4/A10) is plenty for
 PubMedBERT-base on BC5CDR. Full NER + relation training is well under an hour.
 
-## Option B — Docker
+## Option B: Docker
 
 ```bash
 docker build -t pcs-signalminer -f Dockerfile .
@@ -40,12 +40,12 @@ docker run --gpus all -v $PWD:/workspace pcs-signalminer \
     python scripts/run_train_ner.py
 ```
 
-## Option C — Colab / Kaggle
+## Option C: Colab / Kaggle
 Upload the repo, `pip install -r requirements-gpu.txt` (torch already present on
 those runtimes), run the same `scripts/run_*.py`. Download `models/` at the end.
 
 ## Notes
 - Increase `ner.batch_size` / `relation.batch_size` in `configs/config.yaml` on
-  larger GPUs (e.g. 32–64) for speed.
-- Set `epochs` back to 4–5 for NER on GPU (CPU default was lowered to 3).
+  larger GPUs (e.g. 32-64) for speed.
+- Set `epochs` back to 4-5 for NER on GPU (CPU default was lowered to 3).
 - All runs are seeded (`seed: 42`) for reproducibility.

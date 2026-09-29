@@ -1,4 +1,4 @@
-"""Stage 2 — Exploratory data analysis + biostatistics on BC5CDR.
+"""Stage 2: exploratory data analysis + biostatistics on BC5CDR.
 
 Produces:
   - reports/figures/*.png      (corpus visualizations)
@@ -155,14 +155,14 @@ def main():
     sig = enr[enr.q_bh < 0.05]
 
     lines = [
-        "# EDA Summary — BC5CDR\n",
+        "# EDA Summary: BC5CDR\n",
         f"- Documents: **{n_docs}** (500 train / 500 dev / 500 test)",
         f"- Chemical mentions: **{int(df_types['Chemical'].sum())}**, "
         f"Disease mentions: **{int(df_types['Disease'].sum())}**",
         f"- Unique chemical concepts (MeSH): **{uniq_chem}**, "
         f"unique disease concepts: **{uniq_dis}**",
         f"- Gold CID relations: **{n_rel}**\n",
-        "## Biostatistics — chemicals enriched as disease inducers",
+        "## Biostatistics: chemicals enriched as disease inducers",
         f"Fisher's exact test (one-sided) with Benjamini-Hochberg FDR correction. "
         f"**{len(sig)}** chemicals are significantly enriched (q < 0.05) for "
         f"chemical-induced-disease relations vs. the rest of the corpus.\n",
