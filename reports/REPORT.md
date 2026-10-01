@@ -160,10 +160,3 @@ python scripts/run_build_graph.py       # knowledge graph + SQL + graph algos
 python scripts/run_topics_trends.py     # topics + time-series
 streamlit run app/dashboard.py          # dashboard
 ```
-
-## 7. Mapping to the role (Novartis Expert Data Science, PCS)
-Text mining (entities + relations + classification), NLP (NER, topic modeling,
-clustering), **graph algorithms**, **SQL/DuckDB**, **GenAI**, statistical
-analysis/**biostatistics**, **data visualization/dashboards**, multi-source
-integration (BC5CDR + CTD + MeSH + PubMed), reproducible Git pipelines, and data
-governance, all applied to a preclinical-safety problem.

@@ -37,7 +37,7 @@ streamlit run app/dashboard.py            # dashboard
 ```
 
 ## Documentation
-- [PROJECT_PLAN.md](PROJECT_PLAN.md): full plan, stages, evaluation, JD mapping.
+- [PROJECT_PLAN.md](PROJECT_PLAN.md): full plan, stages and evaluation.
 - [docs/DATA_CARD.md](docs/DATA_CARD.md): datasets, licensing, provenance.
 - [docs/GOVERNANCE.md](docs/GOVERNANCE.md): data governance & compliance notes.
 
@@ -48,7 +48,7 @@ streamlit run app/dashboard.py            # dashboard
 - **Knowledge graph:** 1,262 nodes / 2,434 edges in DuckDB; centrality, **10 toxicity communities**, link-prediction hypotheses.
 - **Biostatistics:** **49 chemicals** significantly enriched as inducers (Fisher exact, BH-FDR q<0.05).
 - **Topics/trends:** 26 coherent BERTopic topics; signal time-series 1968-2016 (PubMed years via E-utilities).
-- **GenAI study:** Claude Opus 4.8 structured-output relation extraction vs. supervised, with cost/latency.
+- **GenAI study:** a Claude Opus 4.8 structured-output relation extractor is built, but only the no-API baseline (co-occurrence, F1 0.46) has been run. The Claude arm has not been evaluated.
 - **Supervised models:** PubMedBERT NER + relation trained on **GCP T4** (`scripts/gcp_train.sh`).
 
 See [reports/REPORT.md](reports/REPORT.md) for the full technical writeup and [PROJECT_PLAN.md](PROJECT_PLAN.md) for the roadmap.

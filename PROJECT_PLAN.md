@@ -7,11 +7,6 @@ automatically **extracts, normalizes, and ranks "chemical induces adverse
 condition" signals**, assembling them into a queryable **toxicology knowledge
 graph** with a stakeholder-facing dashboard.
 
-> Target role context: Novartis *Expert Data Science, Preclinical Safety (PCS)*,
-> a drug-safety / toxicology org that works with scientists & pathologists. This
-> project mirrors a real PCS function: surfacing chemical/toxicity signals from
-> the literature to support safety assessment.
-
 ---
 
 ## 1. Why this dataset & framing
@@ -39,19 +34,19 @@ normalization, a knowledge graph, and a GenAI build-vs-buy study.
 
 ## 3. Pipeline stages
 
-| # | Stage | Output | Key JD skill hit |
-|---|-------|--------|------------------|
-| 0 | Scaffold & env | repo, env, configs | Git, reproducible practices |
-| 1 | Data acquisition & QC | BC5CDR + CTD + MeSH loaded, quality report | multi-source structured+unstructured integration, data quality |
-| 2 | EDA & biostatistics | corpus stats, IAA, co-occurrence enrichment | statistical analysis, EDA, visualization |
-| 3 | NER (PubMedBERT) | chemical+disease tagger in SOTA band | entity recognition, model validation |
-| 4 | Entity normalization | spans → MeSH IDs | text structuring, data integration |
-| 5 | Relation extraction (supervised) | document-level CID classifier | relationships, classification, predictive modeling |
-| 6 | **GenAI study** | Claude vs fine-tuned vs hybrid + cost/latency/error analysis | GenAI, model evaluation |
-| 7 | Knowledge graph + SQL | DuckDB tables + NetworkX graph + graph algos | SQL/databases, graph algorithms |
-| 8 | Topics, clustering, trends | BERTopic clusters + time-series of signals | topic modelling, clustering, time series |
-| 9 | Dashboard | Streamlit/Plotly safety explorer | dashboards, viz, communication |
-| 10 | Report & governance | exec summary, data card, limitations | communication, data governance |
+| # | Stage | Output |
+|---|-------|--------|
+| 0 | Scaffold & env | repo, env, configs |
+| 1 | Data acquisition & QC | BC5CDR + CTD + MeSH loaded, quality report |
+| 2 | EDA & biostatistics | corpus stats, IAA, co-occurrence enrichment |
+| 3 | NER (PubMedBERT) | chemical+disease tagger in SOTA band |
+| 4 | Entity normalization | spans → MeSH IDs |
+| 5 | Relation extraction (supervised) | document-level CID classifier |
+| 6 | **GenAI study** | Claude vs fine-tuned vs hybrid + cost/latency/error analysis |
+| 7 | Knowledge graph + SQL | DuckDB tables + NetworkX graph + graph algos |
+| 8 | Topics, clustering, trends | BERTopic clusters + time-series of signals |
+| 9 | Dashboard | Streamlit/Plotly safety explorer |
+| 10 | Report & governance | exec summary, data card, limitations |
 
 ## 4. Evaluation
 - **NER:** entity-level micro/macro F1 (CoNLL eval), per-type breakdown.
