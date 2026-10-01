@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from pcs_signalminer.data.pubtator import load_jsonl, Document, Entity, Relation  # noqa: E402
-from pcs_signalminer.relation import candidates as C  # noqa: E402
+from pcs_signalminer.relation import candidates  # noqa: E402
 from pcs_signalminer.relation.featurize import mark_text, CHEM_START, DIS_START  # noqa: E402
 from pcs_signalminer.linking.normalizer import DictionaryNormalizer  # noqa: E402
 
@@ -34,7 +34,7 @@ def test_candidate_labels_match_gold():
                    entities=[Entity(0, 1, "A", "Chemical", ["D1"]),
                              Entity(9, 10, "B", "Disease", ["D2"])],
                    relations=[Relation("D1", "D2")])
-    cands = C.build_candidates(doc)
+    cands = candidates.build_candidates(doc)
     assert len(cands) == 1
     assert cands[0].label == 1
     assert cands[0].chemical_mesh == "D1" and cands[0].disease_mesh == "D2"

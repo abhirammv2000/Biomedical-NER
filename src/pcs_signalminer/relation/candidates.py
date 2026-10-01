@@ -1,13 +1,8 @@
-"""Build document-level candidate chemical->disease pairs for relation
-extraction.
+"""Build the candidate chemical and disease pairs for relation extraction.
 
-BC5CDR's CID relation is annotated at the *document* level over normalized
-concept ids (MeSH), not between specific mention spans. So the relation task is:
-for every (chemical concept, disease concept) co-occurring in an abstract,
-decide whether the chemical is reported to *induce* that disease.
-
-This module enumerates candidate concept pairs and labels them against the gold
-CID relations, producing a balanced, fully traceable dataset.
+BC5CDR annotates the relation per document over MeSH concept ids, not between mention spans. So for every chemical and disease
+that appear together in an abstract, the task is to decide whether the chemical is reported to induce the disease. This lists the
+pairs and labels them against the gold relations, with the source of every pair traceable.
 """
 from __future__ import annotations
 

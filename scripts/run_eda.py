@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from pcs_signalminer.data.pubtator import load_jsonl  # noqa: E402
-from pcs_signalminer.relation import candidates as C  # noqa: E402
+from pcs_signalminer.relation import candidates  # noqa: E402
 
 PROC = ROOT / "data" / "processed"
 FIG = ROOT / "reports" / "figures"
@@ -114,7 +114,7 @@ def chemical_enrichment(splits) -> pd.DataFrame:
     than the rest of the corpus? Identifies chemicals statistically enriched as
     disease inducers (a literature-derived safety signal)."""
     all_docs = [d for docs in splits.values() for d in docs]
-    cands = C.build_dataset(all_docs)
+    cands = candidates.build_dataset(all_docs)
     df = pd.DataFrame([{"chem": c.chemical_mesh,
                         "chem_name": c.chemical_names[0] if c.chemical_names else c.chemical_mesh,
                         "label": c.label} for c in cands])

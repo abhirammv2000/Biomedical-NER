@@ -1,14 +1,9 @@
-"""LLM-based document-level chemical-induced-disease (CID) relation extraction
-with Claude.
+"""Chemical-induced-disease relation extraction with Claude.
 
-Given an abstract and the chemical/disease concepts it mentions, Claude decides
-which (chemical, disease) pairs are reported as chemical-INDUCED disease. This is
-the GenAI arm of the build-vs-buy study against the fine-tuned encoder.
-
-Uses the Anthropic SDK with structured outputs (output_config.format) so the
-response is guaranteed-parseable JSON. No prefill, no temperature; both are
-rejected on Opus 4.8. A deterministic mock path lets the pipeline run end-to-end
-without an API key (set PCS_GENAI_MOCK=1 or pass mock=True).
+Given an abstract and the chemicals and diseases in it, Claude decides which pairs are reported as the chemical inducing the
+disease. It is the LLM side of the comparison with the fine-tuned encoder, and the real Claude run hasn't been done yet. It uses
+structured outputs (output_config.format) so the reply is valid json, with no prefill and no temperature (Opus 4.8 rejects both).
+A mock path runs the pipeline without an API key (PCS_GENAI_MOCK=1 or mock=True).
 """
 from __future__ import annotations
 
@@ -80,10 +75,7 @@ def build_user_prompt(text: str,
     )
 
 
-# --------------------------------------------------------------------------- #
-# Mock path: deterministic co-occurrence-in-same-sentence heuristic.
-# Lets the whole evaluation pipeline run (and be unit-tested) without a key.
-# --------------------------------------------------------------------------- #
+# mock path: pairs that co-occur in the same sentence, so the pipeline runs and can be tested without a key
 def _mock_extract(text: str,
                   chemicals: dict[str, list[str]],
                   diseases: dict[str, list[str]]) -> set[tuple[str, str]]:

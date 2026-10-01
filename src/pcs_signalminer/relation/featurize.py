@@ -1,10 +1,6 @@
-"""Featurize document-level relation candidates for a transformer classifier.
-
-Uses the *entity-marker* technique: every mention of the candidate chemical is
-wrapped in [CHEM]...[/CHEM] and every mention of the candidate disease in
-[DIS]...[/DIS], so the model sees which concept pair it must judge while still
-reading the full document context (the CID relation is document-level and often
-cross-sentence).
+"""Prepare relation candidates for the classifier with entity markers: every mention of the chemical is wrapped in
+[CHEM]...[/CHEM] and every mention of the disease in [DIS]...[/DIS]. The model sees which pair to judge and still reads
+the whole abstract, which matters since the relation is often across sentences.
 """
 from __future__ import annotations
 
@@ -16,12 +12,8 @@ MARKER_TOKENS = [CHEM_START, CHEM_END, DIS_START, DIS_END]
 def mark_text(text: str,
               chem_offsets: list[tuple[int, int]],
               dis_offsets: list[tuple[int, int]]) -> str:
-    """Insert entity markers around the target chemical and disease mentions.
-
-    Offsets are inserted right-to-left so earlier offsets stay valid. Overlapping
-    spans (rare) are handled by skipping a marker that would land inside an
-    already-inserted one via simple sorted, non-overlapping application.
-    """
+    """Put markers around the target chemical and disease mentions. They go in from right to left so the earlier
+    offsets stay valid, and a marker that would land inside another one is skipped."""
     events = []  # (position, text_to_insert, priority) priority: ends before starts at same pos
     for s, e in chem_offsets:
         events.append((s, CHEM_START, 1))

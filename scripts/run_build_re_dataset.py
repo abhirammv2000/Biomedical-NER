@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from pcs_signalminer.data.pubtator import load_jsonl  # noqa: E402
-from pcs_signalminer.relation import candidates as C  # noqa: E402
+from pcs_signalminer.relation import candidates  # noqa: E402
 
 PROC_DIR = ROOT / "data" / "processed"
 REPORT_DIR = ROOT / "reports"
@@ -44,10 +44,10 @@ def main() -> None:
     report = {}
     for name in ("train", "dev", "test"):
         docs = load_jsonl(PROC_DIR / f"bc5cdr_{name}.jsonl")
-        cands = C.build_dataset(docs)
+        cands = candidates.build_dataset(docs)
         out = PROC_DIR / f"re_candidates_{name}.jsonl"
-        C.candidates_to_jsonl(cands, out)
-        stats = C.dataset_stats(cands)
+        candidates.candidates_to_jsonl(cands, out)
+        stats = candidates.dataset_stats(cands)
         ceil = recall_ceiling(docs)
         report[name] = {**stats, **ceil}
         print(f"[{name}] pairs={stats['candidate_pairs']} "
