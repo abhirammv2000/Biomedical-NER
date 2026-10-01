@@ -8,7 +8,7 @@ drug-safety environment, even though it uses only public literature data.
   reference databases (CTD, MeSH). No patient-level or proprietary data.
 
 ## Provenance & auditability
-- Every extracted chemical→disease signal carries its **source PMID** and the
+- Every extracted chemical-disease signal carries its **source PMID** and the
   text span(s) supporting it, so any claim is traceable to evidence.
 - Pipeline stages are config-driven and seeded; runs are reproducible from raw
   data to final graph.

@@ -40,7 +40,7 @@ normalization, a knowledge graph, and a GenAI build-vs-buy study.
 | 1 | Data acquisition & QC | BC5CDR + CTD + MeSH loaded, quality report |
 | 2 | EDA & biostatistics | corpus stats, IAA, co-occurrence enrichment |
 | 3 | NER (PubMedBERT) | chemical+disease tagger in SOTA band |
-| 4 | Entity normalization | spans → MeSH IDs |
+| 4 | Entity normalization | spans to MeSH IDs |
 | 5 | Relation extraction (supervised) | document-level CID classifier |
 | 6 | **GenAI study** | Claude vs fine-tuned vs hybrid + cost/latency/error analysis |
 | 7 | Knowledge graph + SQL | DuckDB tables + NetworkX graph + graph algos |

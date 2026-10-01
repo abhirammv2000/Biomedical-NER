@@ -19,7 +19,7 @@ DUCKDB = ROOT / "data" / "processed" / "signals.duckdb"
 REPORTS = ROOT / "reports"
 FIGS = REPORTS / "figures"
 
-st.set_page_config(page_title="PCS-SignalMiner", page_icon="💊", layout="wide")
+st.set_page_config(page_title="PCS-SignalMiner", layout="wide")
 
 
 @st.cache_data
@@ -44,7 +44,7 @@ signals = load_table("SELECT * FROM signals")
 chemicals = load_table("SELECT * FROM chemicals ORDER BY n_diseases DESC")
 diseases = load_table("SELECT * FROM diseases ORDER BY n_chemicals DESC")
 
-st.title("💊 PCS-SignalMiner")
+st.title("PCS-SignalMiner")
 st.caption("Literature-based drug-safety signal mining (BC5CDR): chemical-induced "
            "disease signals with provenance, for preclinical safety review.")
 
@@ -55,11 +55,11 @@ c3.metric("Signals (edges)", f"{len(signals):,}")
 c4.metric("Evidence mentions", f"{int(signals.n_pmids.sum()):,}")
 
 tab_drug, tab_graph, tab_trends, tab_models = st.tabs(
-    ["🔎 Drug Safety Explorer", "🕸️ Graph Insights", "📈 Trends & Topics", "🤖 Models & GenAI"])
+    ["Drug Safety Explorer", "Graph Insights", "Trends & Topics", "Models & GenAI"])
 
 # --------------------------------------------------------------------------- #
 with tab_drug:
-    st.subheader("Search a chemical → reported adverse conditions")
+    st.subheader("Search a chemical for its reported adverse conditions")
     drug = st.selectbox("Chemical", chemicals.name.tolist(), index=0)
     sub = signals[signals.chemical_name == drug].sort_values("n_pmids", ascending=False)
     st.markdown(f"**{drug}** is reported to induce **{len(sub)}** distinct conditions.")
@@ -81,7 +81,7 @@ with tab_drug:
             pmids = r.pmids.split(";")
             links = ", ".join(
                 f"[{p}](https://pubmed.ncbi.nlm.nih.gov/{p}/)" for p in pmids[:8])
-            st.markdown(f"- **{drug} → {r.disease_name}**: {links}")
+            st.markdown(f"- **{drug} -> {r.disease_name}**: {links}")
 
 # --------------------------------------------------------------------------- #
 with tab_graph:
@@ -100,16 +100,16 @@ with tab_graph:
                     .rename(columns={"label": "disease", "degree": "# chemicals"}),
                     hide_index=True, use_container_width=True)
 
-        st.subheader("🔬 Novel safety-signal hypotheses (link prediction)")
-        st.caption("Chemical→disease pairs NOT in the literature graph, ranked by "
+        st.subheader("Novel safety-signal hypotheses (link prediction)")
+        st.caption("Chemical-disease pairs NOT in the literature graph, ranked by "
                    "similarity to known inducers. Hypotheses for human review, not confirmed findings.")
         st.dataframe(pd.DataFrame(gr["novel_signal_hypotheses"])[["chemical", "disease", "score"]],
                      hide_index=True, use_container_width=True)
 
-        st.subheader("🧩 Toxicity communities")
+        st.subheader("Toxicity communities")
         for c in gr["communities"][:6]:
             st.markdown(f"**Community {c['community']}** ({c['size']} nodes): "
-                        f"chemicals: {', '.join(c['chemicals'][:5])} … "
+                        f"chemicals: {', '.join(c['chemicals'][:5])}, "
                         f"diseases: {', '.join(c['diseases'][:5])}")
 
 # --------------------------------------------------------------------------- #
